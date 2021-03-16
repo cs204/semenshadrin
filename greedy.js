@@ -4,11 +4,8 @@ testGreedy(items, 20, cmpDencity)
 
 function cmpDencity(itemA, itemB)
 {
-	const r = itemA / itemB // как понял нужно задать это значение как удельную цену...
-	//как-то что из себя представляет удельная цена даже не знаю,
-	//гугл выдает слишком сложные для филолога вещи...
-	//пробовал другие варианты и аллгоритмы, они в "черновике недели 4" то есть папка week4
-	return r
+	const r = (itemA.value / itemA.weight) - (itemB.value / itemB.weight)
+		return r
 }
 
 function testGreedy(items, maxWeight, cmpFunction)
